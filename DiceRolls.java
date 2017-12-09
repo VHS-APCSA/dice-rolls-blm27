@@ -9,7 +9,7 @@ public class DiceRolls
 	 */
 	public DiceRolls()
 	{
-		
+		tally = new int[11];
 	}
 	/**
 	 * This method should roll two six-sided dice using the 
