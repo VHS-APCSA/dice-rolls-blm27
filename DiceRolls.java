@@ -21,7 +21,7 @@ public class DiceRolls
 	 */
 	public void roll()
 	{
-		
+		tally[Die.die(6) + Die.die(6) - 2]++;
 	}
 	/**
 	 * Generate a String histogram of your results.
@@ -36,6 +36,17 @@ public class DiceRolls
 	 */
 	public String histogram()
 	{
-		
+		String res = "";
+		for(int roll = 0; roll < tally.length; roll++)
+		{
+			res += tally[roll] + "\t";
+			for(int tal = 0; tal < tally[roll]; tal++)
+			{
+				res += "*" ;
+			}
+			res += "\n";
+		}
+
+		return res;
 	}
 }
